@@ -23,22 +23,29 @@ class BaseDataset(data.Dataset):
 
 def get_transform(opt):
     transform_list = []
+    # Modify transform to specify width and height
     if opt.resize_or_crop == 'resize_and_crop':
-        osize = [opt.loadSize, opt.loadSize]
+        osize = [opt.loadSizeH, opt.loadSizeW]
+        fsize = [opt.fineSizeH, opt.fineSizeW]
         transform_list.append(transforms.Resize(osize, Image.BICUBIC))
-        transform_list.append(transforms.RandomCrop(opt.fineSize))
-    elif opt.resize_or_crop == 'crop':
-        transform_list.append(transforms.RandomCrop(opt.fineSize))
-    elif opt.resize_or_crop == 'scale_width':
-        transform_list.append(transforms.Lambda(
-            lambda img: __scale_width(img, opt.fineSize)))
-    elif opt.resize_or_crop == 'scale_width_and_crop':
-        transform_list.append(transforms.Lambda(
-            lambda img: __scale_width(img, opt.loadSize)))
-        transform_list.append(transforms.RandomCrop(opt.fineSize))
-    elif opt.resize_or_crop == 'none':
-        transform_list.append(transforms.Lambda(
-            lambda img: __adjust(img)))
+        transform_list.append(transforms.RandomCrop(fsize))
+    # Original CycleGAN code
+    # if opt.resize_or_crop == 'resize_and_crop':
+    #     osize = [opt.loadSize, opt.loadSize]
+    #     transform_list.append(transforms.Resize(osize, Image.BICUBIC))
+    #     transform_list.append(transforms.RandomCrop(opt.fineSize))
+    # elif opt.resize_or_crop == 'crop':
+    #     transform_list.append(transforms.RandomCrop(opt.fineSize))
+    # elif opt.resize_or_crop == 'scale_width':
+    #     transform_list.append(transforms.Lambda(
+    #         lambda img: __scale_width(img, opt.fineSize)))
+    # elif opt.resize_or_crop == 'scale_width_and_crop':
+    #     transform_list.append(transforms.Lambda(
+    #         lambda img: __scale_width(img, opt.loadSize)))
+    #     transform_list.append(transforms.RandomCrop(opt.fineSize))
+    # elif opt.resize_or_crop == 'none':
+    #     transform_list.append(transforms.Lambda(
+    #         lambda img: __adjust(img)))
     else:
         raise ValueError('--resize_or_crop %s is not a valid option.' % opt.resize_or_crop)
 
