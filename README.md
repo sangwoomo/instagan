@@ -98,7 +98,7 @@ python test.py --dataroot ./datasets/shp2gir_coco --model insta_gan --name shp2g
 ## Results
 
 We provide some translation results of our model.
-See [more results](docs/more_results.md) in high resolution images.
+See the [link](/docs/more_results.md) for more translation results.
 
 ### 1. Fashion dataset (pants->skirt)
 
