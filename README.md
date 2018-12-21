@@ -119,13 +119,12 @@ We provide some translation results of our model. See [our paper](https://openre
 ## Citation
 If you use this code for your research, please cite our papers.
 ```
-@inproceedings{    
-    anonymous2019instance-aware,    
-    title={Instance-aware Image-to-Image Translation},    
-    author={Anonymous},    
-    booktitle={Submitted to International Conference on Learning Representations},    
-    year={2019},    
-    url={https://openreview.net/forum?id=ryxwJhC9YX},    
-    note={under review}    
+@inproceedings{
+    mo2018instanceaware,
+    title={Instance-aware Image-to-Image Translation},
+    author={Sangwoo Mo and Minsu Cho and Jinwoo Shin},
+    booktitle={International Conference on Learning Representations},
+    year={2019},
+    url={https://openreview.net/forum?id=ryxwJhC9YX},
 }
 ```
