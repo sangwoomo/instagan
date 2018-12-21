@@ -40,17 +40,6 @@
 <img src='../imgs/more/coco-13.png'>
 <img src='../imgs/more/coco-14.png'>
 
-### COCO dataset (giraffe->sheep)
-
-<img src='../imgs/more/label.png'>
-<img src='../imgs/more/coco-8.png'>
-<img src='../imgs/more/coco-9.png'>
-<img src='../imgs/more/coco-10.png'>
-<img src='../imgs/more/coco-11.png'>
-<img src='../imgs/more/coco-12.png'>
-<img src='../imgs/more/coco-13.png'>
-<img src='../imgs/more/coco-14.png'>
-
 ### COCO dataset (zebra->elephant)
 
 <img src='../imgs/more/label.png'>
