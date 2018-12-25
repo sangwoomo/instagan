@@ -24,6 +24,7 @@ def create_argument_parser():
 	parser.add_argument('--cat2', type=str, default='skirt', help='category 2')
 	parser.add_argument('--size_h', type=float, default=450, help='height')
 	parser.add_argument('--size_w', type=float, default=300, help='width')
+	parser.add_argument('--no_skip_horizontal', action='store_true', help='do *not* skip horizontal images')
 	return parser
 
 def generate_ccp_dataset(args):
