@@ -1,6 +1,6 @@
-# Instance-aware Image-to-Image Translation (InstaGAN)
+# InstaGAN: Instance-aware Image Translation
 
-PyTorch implementation of ["Instance-aware Image-to-Image Translation"](https://openreview.net/forum?id=ryxwJhC9YX) (ICLR 2019).
+PyTorch implementation of ["InstaGAN: Instance-aware Image Translation"](https://openreview.net/forum?id=ryxwJhC9YX) (ICLR 2019).
 The implementation is based on the [official CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) code.
 Our major contributions are in `./models/insta_gan_model.py` and `./models/networks.py`.
 
@@ -122,7 +122,7 @@ If you use this code for your research, please cite our papers.
 ```
 @inproceedings{
     mo2018instanceaware,
-    title={Instance-aware Image-to-Image Translation},
+    title={InstaGAN: Instance-aware Image Translation},
     author={Sangwoo Mo and Minsu Cho and Jinwoo Shin},
     booktitle={International Conference on Learning Representations},
     year={2019},
