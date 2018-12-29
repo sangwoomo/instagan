@@ -22,7 +22,6 @@ def create_argument_parser():
 	parser.add_argument('--image_size', type=int, default=256, help='image size')
 	parser.add_argument('--cat1', type=str, default='sheep', help='category 1')
 	parser.add_argument('--cat2', type=str, default='giraffe', help='category 2')
-	parser.add_argument('--threshold', type=float, default=0, help='threshold of ratio for instances')
 	return parser
 
 
@@ -65,18 +64,15 @@ def generate_coco_dataset_sub(args, idx1, idx2, cat):
 		anns = coco.loadAnns(ann_ids)
 
 		count = 0
-		seg_union = 0
 		for i in range(len(anns)):
 			seg = coco.annToMask(anns[i])
-			seg_union += seg  # union of instances
 			seg = Image.fromarray(seg * 255)
 			seg = resize(seg, args.image_size)
 			if np.sum(np.asarray(seg)) > 0:
 				seg.save(seg_path / '{}_{}.png'.format(pb.n, count))
 				count += 1
-		seg_union[seg_union > 1] = 1  # remove duplicated parts
 
-		if count > 0 and np.mean(seg) > args.threshold:
+		if count > 0:  # at least one instance exists
 			img = Image.open(data_path / img['file_name'])
 			img = resize(img, args.image_size)
 			img.save(img_path / '{}.png'.format(pb.n))
