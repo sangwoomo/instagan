@@ -121,7 +121,7 @@ See the [**link**](/docs/more_results.md) for more translation results.
 If you use this code for your research, please cite our papers.
 ```
 @inproceedings{
-    mo2018instagan,
+    mo2019instagan,
     title={InstaGAN: Instance-aware Image-to-Image Translation},
     author={Sangwoo Mo and Minsu Cho and Jinwoo Shin},
     booktitle={International Conference on Learning Representations},
