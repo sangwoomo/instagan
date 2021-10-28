@@ -1,5 +1,9 @@
 # InstaGAN: Instance-aware Image-to-Image Translation
 
+**Warning:** This repo contains a model which has potential ethical concerns. Remark that the task of jeans<->skirt was a bad application and should not be used in future research. See the [twitter thread](https://twitter.com/SashaMTL/status/1453491661720391685) for the discussion.
+
+---
+
 PyTorch implementation of ["InstaGAN: Instance-aware Image-to-Image Translation"](https://openreview.net/forum?id=ryxwJhC9YX) (ICLR 2019).
 The implementation is based on the [official CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) code.
 Our major contributions are in `./models/insta_gan_model.py` and `./models/networks.py`.
